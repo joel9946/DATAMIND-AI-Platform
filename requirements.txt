@@ -1,0 +1,27 @@
+# DataMind — AI Data Science Platform
+# Requirements (all free, all local)
+
+# ── Core App ──────────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── Data Processing ───────────────────────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.26.0
+openpyxl>=3.1.0        # For Excel support
+pyarrow>=14.0.0        # For Parquet support
+
+# ── Machine Learning ──────────────────────────────────────────────────────────
+scikit-learn>=1.4.0
+
+# ── Visualization ─────────────────────────────────────────────────────────────
+plotly>=5.20.0
+
+# ── HTTP Client (for Ollama API) ──────────────────────────────────────────────
+requests>=2.31.0
+
+# ── Optional Upgrades (uncomment as needed) ───────────────────────────────────
+# pypdf>=4.0.0              # Better PDF parsing
+# python-docx>=1.0.0        # DOCX file parsing
+# sentence-transformers>=2.5.0  # High-quality embeddings for RAG
+# chromadb>=0.5.0           # Production vector store
+# faiss-cpu>=1.8.0          # GPU-scale vector search
