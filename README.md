@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ⬡ DataMind — AI-Powered Data Science Platform
 
 > End-to-end data science platform powered by local LLMs via Ollama.  
@@ -104,3 +105,7 @@ Trains 9 models simultaneously with 5-fold cross-validation:
 
 ## 📄 License
 MIT License — free to use, modify, and share.
+=======
+# DATAMIND-AI-Platform
+Local LLM-powered data science platform. EDA automation, NL→Pandas queries, RAG document Q&amp;A, and AutoML with 9 models. Stack: Python · Streamlit · Ollama · scikit-learn · Plotly. 100% private.
+>>>>>>> e2fb68a6db1df047826ce0802e63a7897d149ae6
