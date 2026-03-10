@@ -1,111 +1,59 @@
-<<<<<<< HEAD
-# ⬡ DataMind — AI-Powered Data Science Platform
+# 🧠 DataMind — AI-Powered Data Science Platform
 
-> End-to-end data science platform powered by local LLMs via Ollama.  
+> End-to-end data science platform powered by local LLMs via Ollama.
 > No cloud. No API keys. No cost. 100% private.
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue?style=flat&logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.x-red?style=flat&logo=streamlit)
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-Local_LLM-black?style=flat)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
 ---
 
 ## ✨ Features
-
-| Module | Status | Description |
-|---|---|---|
-| 🔬 EDA Lab | ✅ Live | Auto EDA — charts, correlations, outlier detection, AI narrative |
-| 💬 Data Chat | ✅ Live | Ask questions in plain English → Pandas code → live results |
-| 📚 RAG Studio | ✅ Live | Upload docs → vector search → grounded AI answers |
-| 🤖 AutoML Arena | 🚧 In Development | 9 models race simultaneously → leaderboard → AI explanation |
+- 🔍 Natural language → Pandas queries (NL→EDA)
+- 📄 RAG-powered document Q&A
+- 🤖 AutoML with 9 models
+- 📊 EDA automation with Plotly charts
+- 🔒 100% local — no data leaves your machine
 
 ---
 
-## 🚀 Quick Start
-
-**1. Clone the repo**
-```bash
-git clone https://github.com/joel9946/DATAMIND-AI-Platform
-cd DataMind
+## ⚙️ Architecture
+```
+User Input (NL Query / Document)
+        ↓
+Streamlit UI
+        ↓
+[RAG Pipeline] OR [NL→Pandas Engine] OR [AutoML Module]
+        ↓
+Ollama Local LLM (no API needed)
+        ↓
+Results + Visualizations
 ```
 
-**2. Create a virtual environment**
-```bash
-python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # Mac/Linux
-```
+## 🛠️ Tech Stack
+Python · Streamlit · Ollama · Scikit-learn · Plotly · Pandas
 
-**3. Install dependencies**
+---
+
+## ▶️ How to Run
 ```bash
+git clone https://github.com/joel9946/DATAMIND-AI-Platform.git
+cd DATAMIND-AI-Platform
 pip install -r requirements.txt
-```
-
-**4. Install and start Ollama**  
-Download from [ollama.com](https://ollama.com), then:
-```bash
-ollama pull llama3.2
-ollama serve
-```
-
-**5. Run the app**
-```bash
+# Make sure Ollama is running locally
 streamlit run app.py
 ```
-
-Open your browser at `http://localhost:8501`
-
----
-
-## 🛠 Tech Stack
-
-- **Frontend:** Streamlit, custom CSS (parallax, dark theme, animations)
-- **AI/LLM:** Ollama (local), streaming token generation
-- **ML:** scikit-learn (9 models), Pandas, NumPy
-- **Visualization:** Plotly (interactive dark-theme charts)
-- **RAG:** Custom vector store, character n-gram embeddings, cosine similarity
-- **Data formats:** CSV, Excel, Parquet, JSON, PDF, TXT, DOCX
 
 ---
 
 ## 📁 Project Structure
 ```
-DataMind/
-├── app.py                  # Main Streamlit application
-├── requirements.txt        # Python dependencies
-├── core/
-│   ├── ollama_client.py    # Ollama API client + AI agents
-│   ├── eda_engine.py       # Automated EDA pipeline
-│   ├── automl_engine.py    # AutoML training (🚧 in dev)
-│   └── rag_engine.py       # RAG pipeline + vector store
-└── ui/
-    └── styles.py           # CSS, animations, HTML components
+DATAMIND-AI-Platform/
+├── app.py
+├── core/          ← AI/ML logic
+├── ui/            ← Streamlit components  
+├── requirements.txt
+└── README.md
 ```
-
----
-
-## 🧠 How RAG Works (Built From Scratch)
-
-1. Upload a document → text extracted
-2. Text cut into overlapping 600-char chunks
-3. Each chunk converted to a 128-dim vector (character n-gram hashing)
-4. Vectors stored in an in-memory similarity search store
-5. Your question → vectorised → top-5 most similar chunks retrieved
-6. Chunks + question fused into a structured prompt → Ollama answers
-
----
-
-## 🤖 AutoML Arena (Coming Soon)
-
-Trains 9 models simultaneously with 5-fold cross-validation:
-`Logistic Regression · Random Forest · Gradient Boosting · Extra Trees · Decision Tree · KNN · Naive Bayes · SVM · Linear Regression`
-
----
-
-## 📄 License
-MIT License — free to use, modify, and share.
-=======
-# DATAMIND-AI-Platform
-Local LLM-powered data science platform. EDA automation, NL→Pandas queries, RAG document Q&amp;A, and AutoML with 9 models. Stack: Python · Streamlit · Ollama · scikit-learn · Plotly. 100% private.
->>>>>>> e2fb68a6db1df047826ce0802e63a7897d149ae6
